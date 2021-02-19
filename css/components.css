@@ -1,0 +1,457 @@
+/**
+ * OVERVIEW
+ *
+ * This file describes the components that build up the site.
+ * From the inner layout to the font color, etc.
+ *
+ */
+
+
+ /**
+ * TABLE OF CONTENTS
+ *
+ * 1. BUTTONS
+ *
+ * 2. ANIMATIONS
+ *
+ * 3. NAVIGATION
+ *
+ * 4. HEADER
+ *
+ * 5. MENU SECTION
+ *
+ * 6. GALLERY SECTION
+ *
+ * 7. RESERVATION SECTION
+ *
+ * 8. CONTACT SECTION
+ *
+ * 9. FOOTER
+ *
+ */
+
+
+
+
+
+
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
+
+.button {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  padding: .5rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+  
+  .button--primary {
+    background-color: var(--primary-color);
+    transition: background-color .2s ease-in;
+    transition: all .3s ease-in;
+  }
+
+  .button--primary:hover {
+    transform: scale(1.1);
+  }
+
+
+
+
+
+/*------------------------------------*\
+  #NAVIGATION
+\*------------------------------------*/
+
+nav {
+  background-color: #F2F0F7;
+  text-align: center;
+}
+
+  nav ul {
+    font-size: 1rem;
+  }
+
+    .navbar-light .navbar-nav .nav-link {
+      color: var(--primary-font-color);
+    }
+
+
+@media (min-width: 768px) {
+
+  nav {
+    background-color: transparent;
+  }
+
+}
+
+
+
+
+
+/*------------------------------------*\
+  #HEADER
+\*------------------------------------*/
+
+  header a, header p {
+    font-size: 1.25rem;
+  }
+
+  .header__img-container img {
+    width: 50%;
+    margin-top: 1rem;
+  }
+
+  .header-text {
+    opacity: 0;
+  }
+
+    #lottieButton {
+      position: relative;
+      display: inline-block;
+      width: 250px;
+      height: 60px;
+      margin-left: -35px;
+    }
+
+    #lottieButton p {
+      position: absolute;
+      z-index: 1;
+      padding: 1rem;
+      top: 0;
+      left: 12%;
+    }
+
+
+@media (min-width: 768px) {
+
+  header {
+    height: 717px;
+    background: url('../assets/header-img.png') no-repeat 46vw center;
+    background-size: 745px auto;
+  }
+
+    header p:nth-child(2) {
+      font-size: 1.875rem;
+    }
+
+    .header__img-container {
+      display: none;
+    } 
+
+}
+
+
+
+
+
+/*------------------------------------*\
+  #MENU SECTION
+\*------------------------------------*/
+
+.menu-section {
+  padding-bottom: 4rem;
+  opacity: 0;
+}
+
+  .menu-section h2 {
+    margin-top: 7rem;
+  }
+
+  table {
+    width: 90%;
+    display: block;
+    margin: 1rem auto;
+  }
+
+    table tr:nth-child(even) {
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+      .menu-section--ingredients {
+        font-size: .75rem;
+        padding-bottom: 1.875rem;
+      }
+
+  .menu-section--bordered-table {
+    border: dotted;
+    background-image: url('../assets/dot.png') 10;
+    border-width: 8px 0 8px 0;
+  }
+
+  .menu-section--background {
+    background: url('../assets/menu-header-background.svg') no-repeat bottom;
+    background-size: auto 1370px;
+  }
+
+
+@media (min-width: 768px) {
+  
+  .menu-section {
+    padding-bottom: 18.5rem;
+  }
+
+    .menu-section h2 {
+      margin-bottom: 3.875rem;
+    }
+
+    table {
+      width: 100%;
+      padding-right: 6.625rem;
+      margin: 0;
+    }
+      
+
+    .menu-section--bordered-table {
+      border-width: 0 8px 0 8px;
+    }
+
+    .menu-section--background {
+      background-size: auto;
+    }
+
+}
+
+
+
+
+
+/*------------------------------------*\
+  #GALLERY SECTION
+\*------------------------------------*/
+
+.gallery {
+  background-image: url('../assets/gallery-background1.svg'), url('../assets/gallery-background2.svg');
+  background-position: left bottom, right top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 40%;
+  padding: .2rem 0 4rem 0;
+  margin-top: 2rem;
+}
+
+  .gallery h2 {
+    margin-bottom: 2rem;
+  }
+
+  .gallery__box-caption {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    text-align: center;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    transition: all .3s ease-in-out;
+  }
+
+  .gallery__box:hover .gallery__box-caption {
+    opacity: .6;
+  }
+
+
+@media (min-width: 768px) {
+
+  .gallery {
+    padding-bottom: 11rem;
+    padding-top: 3rem;
+  }
+
+}
+
+
+
+/*------------------------------------*\
+  #RESERVATION SECTION
+\*------------------------------------*/
+
+.reservation-section {
+  opacity: 0;
+}
+
+  .reservation-section h2 {
+    margin: 2rem 0;
+  }
+
+  .reservation-section--phone-number {
+    font-size: 1.125rem;
+  }
+
+
+@media (min-width: 768px) {
+
+  .reservation-section {
+    margin-top: -3rem;
+  }
+
+}
+
+
+
+
+
+/*------------------------------------*\
+  #CONTACT SECTION
+\*------------------------------------*/
+
+.contact-section {
+  margin-top: 6.5rem; 
+  padding-bottom: 8rem; 
+  background: url('../assets/contact-background.svg') no-repeat right bottom;
+  background-size: cover;
+}
+
+  .contact-section h2 {
+    margin-bottom: 3.5rem;
+  }
+
+  .contact-section ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 1rem;
+  }
+
+
+  .contact-section__map {
+    overflow:hidden;
+    position:relative;
+    height: 254px;
+    margin-top: 3rem;
+  }
+
+    .contact-section__map iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+    }
+
+
+@media (min-width: 768px) {
+
+  .contact-section {
+    background-size: auto;
+    background-position: 78% bottom;
+  }
+
+    .contact-section__map {
+      height: 320px;
+      margin: 0 auto;
+      max-width: calc(50% - 30px);
+    }
+}
+
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+footer {
+  background: var(--primary-font-color);
+  text-align: center;
+  height: 180px;
+  vertical-align: top;
+  padding-top: 1rem;
+}
+
+  footer, footer a {
+    color: var(--secondary-font-color);
+  }
+
+  footer a:hover {
+    color: var(--primary-color);
+  }
+
+    .footer--social-icons:first-child {
+      padding-right: 1rem;
+    }
+
+
+@media (min-width: 768px) {
+
+  footer {
+    height: 100px;
+    line-height: 100px;
+    padding-top: 0;
+  }
+
+    .footer-logo {
+      float: left;
+    }
+
+    .footer--social-icons {
+      float: right;
+    }
+
+    .footer--social-icons {
+      padding-right: 1rem;
+    }
+
+      .footer--social-icons:first-child {
+        padding-right: 0rem;
+      }
+
+}
+
+
+/*------------------------------------*\
+  #ANIMATIONS
+\*------------------------------------*/
+
+.fadeInLeft {
+  animation: fadeInLeft 1s;
+  opacity: 1;
+}
+
+@keyframes fadeInLeft {
+
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+
+}
+
+
+.fadeInUp {
+  animation: fadeInUp 1s;
+  opacity: 1;
+}
+
+
+@keyframes fadeInUp {
+
+  0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+
+} 

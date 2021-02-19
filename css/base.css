@@ -1,0 +1,86 @@
+/**
+ * OVERVIEW
+ *
+ * The project is divided into separate style sheets:
+ *
+ * bootstrap.css............CSS rules that control the layout of the website.
+ * base.css..............Global rules and helpers.
+ * components.css........The CSS of components that build up the site.
+ */
+
+
+/**
+ * TABLE OF CONTENTS
+ *
+ * SETTINGS
+ * Variables............Globally-available variables.
+ * Base font-size.......Declaration of the base font-size.
+ * Margins..............Global values of top and bottom margins.
+ *
+ * TYPOGRAPHY
+ * Headings, links and buttons............Typography styles.
+ */
+
+
+
+
+
+/*------------------------------------*\
+  #VARIABLES
+\*------------------------------------*/ 
+
+:root {
+  --primary-color:         #EFFF8D;
+  --secondary-color:       #C4C4C4;
+  --primary-font-color:    #000000;
+  --secondary-font-color:  #ffffff;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+  #TYPOGRAPHY
+\*------------------------------------*/
+
+body {
+  font-family:            'Poppins', sans-serif;;
+  color:                   var(--font-color);
+}
+
+
+h1, 
+th { font-size:            30px; }
+
+h2 { font-size:            50px; }
+
+.footer-logo, 
+.navbar-brand { font-size: 30px; }
+
+h1, 
+h2 {font-weight:           900; }
+
+p, 
+ul { font-size:            .875rem; }
+
+a {
+  font-weight:             bold;
+  color:                   var(--primary-font-color);
+}
+
+a:hover {
+  text-decoration:         none;
+  color:                   var(--primary-font-color);
+}
+
+
+
+
+@media (min-width: 768px) {
+
+  h1, 
+  h2 { font-size:          3.3rem; }
+
+}
